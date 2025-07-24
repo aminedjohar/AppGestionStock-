@@ -1,154 +1,34 @@
-# Application de Gestion de Stock - Java
+Application de Gestion de Stock en Java
+📋 À propos du projet
+Cette application console simple, écrite en Java, permet de gérer l'inventaire de produits d'une boutique. Le projet est volontairement développé en programmation structurée, sans utiliser de classes d'objets, pour se concentrer sur les bases de Java.
 
-## 📋 Description du Projet
+✨ Fonctionnalités
+Ajouter un nouveau produit.
+Modifier les informations d'un produit existant.
+Supprimer un produit du stock.
+Afficher la liste de tous les produits.
+Rechercher un produit par son nom.
+Calculer la valeur totale de l'inventaire.
+🚀 Comment l'utiliser
+Prérequis
+Java JDK 8 ou une version plus récente.
+Lancement
+Ouvrez un terminal, naviguez jusqu'au dossier du projet et exécutez les commandes suivantes :
 
-Cette application Java permet de gérer le stock de produits d'une petite boutique. Elle utilise uniquement la programmation structurée (sans programmation orientée objet) avec des variables primitives, des tableaux parallèles et des méthodes statiques.
+GestionStock
+🛠️ Détails Techniques
+L'application utilise des tableaux parallèles pour stocker les données des produits :
 
-## 🎯 Objectifs de l'Application
+int[] codesProduits : Pour les identifiants uniques.
+String[] nomsProduits : Pour les noms des produits.
+int[] quantites : Pour les quantités en stock.
+double[] prix : Pour les prix unitaires.
+Le stock est limité à un maximum de 100 produits.
 
-L'application permet de :
-1. ✅ **Ajouter un produit** : Ajouter un nouveau produit dans l'inventaire
-2. ✅ **Modifier un produit** : Modifier les informations d'un produit existant
-3. ✅ **Supprimer un produit** : Retirer un produit de l'inventaire
-4. ✅ **Afficher la liste des produits** : Voir tous les produits en stock avec leurs détails
-5. ✅ **Rechercher un produit** : Rechercher un produit par son nom
-6. ✅ **Calculer la valeur totale du stock** : Calculer la valeur totale des produits en stock
-
-## 💻 Structure Technique
-
-### Tableaux Parallèles Utilisés
-- `int[] codesProduits` : Codes uniques pour chaque produit
-- `String[] nomsProduits` : Noms des produits
-- `int[] quantites` : Quantités en stock pour chaque produit
-- `double[] prix` : Prix unitaires de chaque produit
-
-### Méthodes Statiques Implémentées
-- `printMenu()` : Affiche le menu principal
-- `ajouterProduit()` : Ajoute un produit dans les tableaux
-- `modifierProduit()` : Modifie les informations d'un produit existant
-- `supprimerProduit()` : Supprime un produit des tableaux
-- `afficherProduits()` : Affiche la liste complète des produits
-- `rechercherProduit()` : Recherche un produit par son nom
-- `calculerValeurStock()` : Calcule la valeur totale du stock
-
-## 🚀 Installation et Exécution
-
-### Prérequis
-- Java JDK 8 ou version supérieure
-- VS Code avec Extension Pack for Java (optionnel)
-
-### Compilation et Exécution
-```bash
-# Compilation
-javac GestionStock.java
-
-# Exécution
-java GestionStock
-```
-
-## 📸 Captures d'Écran
-
-### Menu Principal
-![Menu Principal](screenshots/menu.png)
-*Interface du menu principal avec toutes les options disponibles*
-
-### Ajouter un Produit
-![Ajouter Produit](screenshots/ajouter.png)
-*Formulaire d'ajout d'un nouveau produit avec validation des données*
-
-### Afficher les Produits
-![Afficher Produits](screenshots/afficher.png)
-*Liste formatée de tous les produits en stock avec leurs détails*
-
-### Modifier un Produit
-![Modifier Produit](screenshots/modifier.png)
-*Interface de modification d'un produit existant*
-
-### Rechercher un Produit
-![Rechercher Produit](screenshots/rechercher.png)
-*Fonction de recherche de produit par nom (insensible à la casse)*
-
-### Calcul de la Valeur Totale
-![Valeur Totale](screenshots/total.png)
-*Calcul et affichage de la valeur totale du stock*
-
-## 🔧 Fonctionnalités Avancées
-
-### Gestion des Erreurs
-- ✅ Validation des types de données (entiers, décimaux)
-- ✅ Vérification des valeurs négatives
-- ✅ Gestion des codes produits uniques
-- ✅ Messages d'erreur informatifs
-
-### Limitations
-- Maximum 100 produits en stock
-- Codes produits doivent être des entiers uniques
-- Interface console uniquement
-
-## 📊 Structure des Données
-
-| Champ | Type | Description |
-|-------|------|-------------|
-| Code | `int` | Identifiant unique du produit |
-| Nom | `String` | Nom du produit |
-| Quantité | `int` | Nombre d'unités en stock |
-| Prix | `double` | Prix unitaire en euros |
-
-## 🎮 Guide d'Utilisation
-
-1. **Démarrer l'application** : Exécutez `java GestionStock`
-2. **Naviguer dans le menu** : Tapez le numéro correspondant à l'action souhaitée
-3. **Saisir les données** : Suivez les instructions à l'écran
-4. **Gérer les erreurs** : En cas d'erreur de saisie, suivez les indications
-
-### Exemple d'Utilisation
-```
-=============== MENU PRINCIPAL ===============
-1. Ajouter un produit
-2. Modifier un produit
-3. Supprimer un produit
-4. Afficher tous les produits
-5. Rechercher un produit
-6. Calculer la valeur totale du stock
-0. Quitter
-==============================================
-Votre choix : 1
-
---- Ajouter un nouveau produit ---
-Code du produit (nombre entier) : 123
-Nom du produit : Smartphone
-Quantité (nombre entier) : 10
-Prix unitaire (nombre décimal) : 299.99
-Produit ajouté avec succès !
-```
-
-## 🏗️ Architecture du Code
-
-```
-GestionStock.java
-├── Variables globales (tableaux parallèles)
-├── Méthode main() (boucle principale)
-├── Méthodes de menu (interfaces utilisateur)
-├── Méthodes de gestion (CRUD operations)
-└── Méthodes utilitaires (recherche, calculs)
-```
-
-## ✨ Points Forts de l'Implémentation
-
-- **Code propre et bien structuré** : Séparation claire des responsabilités
-- **Gestion robuste des erreurs** : Try-catch et validation des données
-- **Interface utilisateur intuitive** : Menu clair et messages informatifs
-- **Tableaux parallèles efficaces** : Gestion optimisée de la mémoire
-- **Fonctionnalités complètes** : Toutes les opérations CRUD implémentées
-
-## 👨‍💻 Auteur
-
-Application développée dans le cadre du TP "Java - Programmation Structurée"
-
-## 📄 Licence
-
-Projet éducatif - Libre d'utilisation pour l'apprentissage
-
----
-
-*Cette application respecte toutes les spécifications du cahier des charges : utilisation exclusive de la programmation structurée, tableaux parallèles, méthodes statiques, et interface console interactive.*
+📸 Captures d'Écran
+*   **Menu Principal**: ![Menu Principal](screenshots/menu.png)
+*   **Ajout d'un Produit**: ![Ajouter Produit](screenshots/ajouter.png)
+*   **Liste des Produits**: ![Afficher Produits](screenshots/afficher.png)
+*   **Modifier un Produit**: ![Modifier Produit](screenshots/modifier.png)
+*   **Supprimer un Produit**: ![Supprimer Produit](screenshots/supprimer.png)
+*   **Rechercher un Produit**: ![Rechercher Produit](screenshots/rechercher.png)
